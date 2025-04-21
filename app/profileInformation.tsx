@@ -19,10 +19,11 @@ const ProfileScreen = () => {
         >
           <Feather name="chevron-left" size={24} />
         </TouchableOpacity>
-        <Text style={styles.title} onPress={() => router.replace("/detail")}>
-          Profile
-        </Text>
-        <Text style={styles.done} onPress={() => router.replace("/detail")}>
+        <Text style={styles.title}>Profile</Text>
+        <Text
+          style={styles.done}
+          onPress={() => router.replace("/profileScreen")}
+        >
           Done
         </Text>
       </View>
@@ -35,17 +36,34 @@ const ProfileScreen = () => {
           <Text style={styles.name}>Emmanuel Oyiboke</Text>
           <Text style={styles.change}>Change profile picture</Text>
         </View>
-        <Text style={styles.label}>First Name</Text>
-        <Text style={styles.input}>Ladji</Text>
-
-        <Text style={styles.label}>Last Name</Text>
-        <Text style={styles.input}>Timer</Text>
-
-        <Text style={styles.label}>Location</Text>
-        <Text style={styles.input}>Dakar</Text>
-
-        <Text style={styles.label}>Mobile phone</Text>
-        <Text style={styles.input}>7888485984947</Text>
+        <View>
+          <Text style={styles.label}>First Name</Text>
+          <View style={styles.input}>
+            <Text>Ladji</Text>
+            <Feather name="check" color="blue" size={20} />
+          </View>
+        </View>
+        <View>
+          <Text style={styles.label}>Last Name</Text>
+          <View style={styles.input}>
+            <Text>Timer</Text>
+            <Feather name="check" color="blue" size={20} />
+          </View>
+        </View>
+        <View>
+          <Text style={styles.label}>Location</Text>
+          <View style={styles.input}>
+            <Text>Dakar</Text>
+            <Feather name="check" color="blue" size={20} />
+          </View>
+        </View>
+        <View>
+          <Text style={styles.label}>Mobile phone</Text>
+          <View style={styles.input}>
+            <Text>788848</Text>
+            <Feather name="check" color="blue" size={20} />
+          </View>
+        </View>
       </View>
     </View>
   );
@@ -101,6 +119,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     // color: "#fff",
   },
+
   change: {
     fontSize: 16,
     color: "#007BFF",
@@ -113,6 +132,9 @@ const styles = StyleSheet.create({
   },
   input: {
     backgroundColor: "#F7F7F9",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
     padding: 12,
     borderRadius: 15,
     marginTop: 10,

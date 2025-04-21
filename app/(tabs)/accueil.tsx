@@ -36,7 +36,10 @@ const HomeScreen = () => {
         {/* Header */}
         <View style={styles.header}>
           <Image source={require("@/assets/images/Hamburger.png")} />
-          <Text style={styles.title} onPress={() => router.replace("/detail")}>
+          <Text
+            style={styles.title}
+            onPress={() => router.replace("/pageRecherche")}
+          >
             Explore
           </Text>
           <TouchableOpacity

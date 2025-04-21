@@ -49,6 +49,8 @@ export default function RootLayout() {
           name="profileInformation"
           options={{ headerShown: false }}
         />
+
+        <Stack.Screen name="pageRecherche" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

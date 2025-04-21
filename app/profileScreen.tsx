@@ -15,7 +15,7 @@ const ProfileScreen = () => {
       <View style={styles.header}>
         <TouchableOpacity
           style={styles.backButton}
-          onPress={() => router.replace("/profile")}
+          onPress={() => router.replace("/profileInformation")}
         >
           <Feather name="chevron-left" size={24} />
         </TouchableOpacity>
